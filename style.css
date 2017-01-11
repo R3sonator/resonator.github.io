@@ -120,14 +120,27 @@ a:visited {
   margin-bottom: 15px;
   font-style: italic;
 }
+#cool-stuff {
+  background-color: yellow;
+  padding: 5% 20px;
+  margin: 0 auto;
+}
+#cool-text {
+  background-color: #fff;
+  padding: 2.5%;
+  width: 80%;
+}
 #events {
-  display: inline-block;
+  display: inline;
   width: 100%;
   background-color: #2a64f8;
-  border: none;
-  padding: 2%;
+  padding: 2.5% 8%;
   color: #fff;
   text-align: center;
+  border: none;
+}
+#events:hover {
+  background-color: #000;
 }
 .feat-img {
   height: 45%;
@@ -163,6 +176,7 @@ Media Queries
   }
   .secondary {
     width: 25%;
+    margin-bottom: 15px;
   }
   .primary {
     width: 50%;
@@ -175,6 +189,23 @@ Media Queries
     padding: 0;
     opacity: 0.5;
     overflow: hidden;
+  }
+}
+@media (max-width: 450px) {
+  .col {
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+    padding: 5%;
+  }
+  .secondary {
+    display:none;
+  }
+  .primary {
+    width: 100%;
+  }
+  .quad {
+    display:none;
   }
 
 }
