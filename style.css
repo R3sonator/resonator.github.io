@@ -24,6 +24,7 @@ h2,h3 {
 
 a {
 	text-decoration: none;
+  color: #fff;
 }
 
 i {
@@ -35,14 +36,14 @@ img {
 
 
 /* =================================
-Layout Styles
+Home Page and Navigation
 ==================================== */
 
-/*-- Navigation -- */
+/*-- Header -- */
 .main-header {
   padding: 15px;
   vertical-align: baseline;
-  margin: auto;
+  margin: 15px auto;
 }
 
 .name {
@@ -53,13 +54,11 @@ Layout Styles
   padding: 0;
   display: inline;
   margin: 0 auto;
-
 }
 
-.main-nav {
+.header-nav {
   padding: 0;
   margin: 0 auto;
-  background: deepbluesky;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -69,29 +68,22 @@ Layout Styles
   width: auto;
 }
 
-.main-nav li {
+.header-nav li {
   text-align: center;
   display: inline-block;
   padding: 0 2.5%;
 }
 
-.main-nav a i {
+.header-nav a i {
   font-size: 2em;
   color: #2a64f8;
   text-align: right;
 }
 
-.main-nav a:hover, .main-nav a i:hover {
-  color: red;
-}
-a:visited {
-  color: #2a64f8;
-}
-
 .second-nav {
-  padding: 0;
-  margin: 0 auto;
-  background: deepbluesky;
+  padding: 10px;
+  margin: 10px auto;
+  color: #fff;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -107,6 +99,21 @@ a:visited {
   padding: 0 2.5%;
   text-transform: uppercase;
 }
+/*--Pseudo Classes--*/
+
+.second-nav a:visited {
+  color: #fff;
+}
+a:visited {
+  color: #2a64f8;
+}
+.second-nav a:hover, .header-nav a i:hover {
+  color: red;
+}
+.second-nav a:hover {
+  border-bottom: dashed #fff 2px;
+}
+
 
 
 /*-- layout containers --*/
@@ -115,7 +122,7 @@ a:visited {
   color: #fff;
   background: #2a64f8;
   margin-bottom: 15px;
-  padding: 2% 0;
+  padding: 5px 0;
 }
 
 .container {
@@ -132,22 +139,38 @@ a:visited {
 .main-footer {
   text-align:center;
 	padding: 2em 0;
+
+}
+.main-footer span {
+  border-bottom: dashed red 2px;
+  padding: 10px;
 }
 
-/* ---- Page Elements---- */
+/* ---- Home Page and Navigation Elements---- */
 .logo {
-  min-width: 30%;
-  max-width: 125px;
+  width: 50px;
   display: inline;
-  padding: 0 5%;
+  position: absolute;
+  left: auto;
 }
 .headline {
   display: inline-block;
-  padding: 0 5%;
+  padding: 10px;
+  margin: 0 10px;
+  line-height: 1.2;
+  font-size: 1.8rem;
+  border-top: dashed #000 2px;
+  border-bottom: dashed #000 2px;
+
 }
 #tagline {
-  margin-bottom: 15px;
+  margin: 10px 0 15px 0;
+  padding: 0;
   font-style: italic;
+  text-align: center;
+  font-size: 1rem;
+  border: none;
+  display: block;
 }
 #cool-stuff {
   background-color: yellow;
@@ -171,6 +194,8 @@ a:visited {
 #events:hover {
   background-color: #000;
 }
+
+/* ---- Home Page and Navigation Images---- */
 .feat-img {
   height: 45%;
   display: inline-block;
