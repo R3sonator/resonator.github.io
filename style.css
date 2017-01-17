@@ -9,11 +9,10 @@ body {
 	line-height: 1.6;
 	color: #000;
   background: #fff;
-  font-family: 'Playfair Display' sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 p {
   font-size: .95em;
-  font-family: Times;
 }
 
 h2,h3 {
@@ -37,9 +36,7 @@ figure {
   line-height: 0;
   position: relative;
 }
-figcaption {
 
-}
 
 
 
@@ -117,7 +114,7 @@ Home Page and Navigation
 a:visited, .donate a:visited {
   color: #2a64f8;
 }
-.second-nav a:hover, .header-nav a i:hover, .icon-logo a i:hover {
+.second-nav a:hover, .header-nav a i:hover, .icon-logo i:hover {
   color: red;
 }
 .second-nav a:hover {
@@ -185,8 +182,8 @@ a:visited, .donate a:visited {
 .icon-logo {
   width: 35px;
   position: absolute;
-  top: -15px;
-  right: -15px;
+  bottom: 0;
+  right: 0;
 }
 .donate {
   position: absolute;
@@ -223,6 +220,12 @@ a:visited, .donate a:visited {
 .mini-img:hover {
   opacity: 1;
   border:solid #2a64f8 2px;
+}
+.contact a {
+  color: red;
+}
+.contact a:hover {
+  background-color: yellow;
 }
 
 
