@@ -17,14 +17,13 @@ p {
 }
 
 h2,h3 {
-  display: inline;
   padding-bottom: 2px;
   border-bottom: solid #2a64f8 2px;
 }
 
 a {
 	text-decoration: none;
-  color: #fff;
+  color: red;
 }
 
 i {
@@ -33,6 +32,15 @@ i {
 img {
   max-width: 100%;
 }
+figure {
+  margin: 0;
+  line-height: 0;
+  position: relative;
+}
+figcaption {
+
+}
+
 
 
 /* =================================
@@ -47,31 +55,32 @@ Home Page and Navigation
 }
 
 .name {
-  font-size: .8rem;
-  max-width: 240px;
-  margin: 0;
+  font-size: 1.95rem;
+  letter-spacing: .2rem;
   text-align: left;
-  padding: 0;
-  display: inline;
-  margin: 0 auto;
+  margin: 0;
+}
+
+.name,
+.header-nav a {
+  text-align: center;
 }
 
 .header-nav {
+  text-align: center;
   padding: 0;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: flex-end;
-  width: auto;
 }
 
 .header-nav li {
-  text-align: center;
+  list-style: none;
   display: inline-block;
-  padding: 0 2.5%;
+}
+
+.header-nav a {
+  font-size: .95em;
+  color: #2a64f8;
+  text-transform: uppercase;
+  padding: 10px 15px;
 }
 
 .header-nav a i {
@@ -125,22 +134,21 @@ a:visited {
   padding: 5px 0;
 }
 
-.container {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
+.col {
+  padding: 1em;
 }
 
 .main {
-  padding: 0 10px;
+  padding: 10px;
   border: solid #2a64f8 2px;
 
 }
 .main-footer {
   text-align:center;
 	padding: 2em 0;
-
+  color: #000;
 }
+
 .main-footer span {
   border-bottom: dashed red 2px;
   padding: 10px;
@@ -148,50 +156,33 @@ a:visited {
 
 /* ---- Home Page and Navigation Elements---- */
 .logo {
-  width: 50px;
-  display: inline;
-  position: absolute;
-  left: auto;
+
+}
+.category {
+  font-size: .98rem;
+  font-style: italic;
 }
 .headline {
-  display: inline-block;
-  padding: 10px;
-  margin: 0 10px;
-  line-height: 1.2;
-  font-size: 1.8rem;
-  border-top: dashed #000 2px;
-  border-bottom: dashed #000 2px;
 
 }
-
-#cool-stuff {
+.tagline {
+  font-size: 1rem;
+  border: none;
+}
+#feature {
   background-color: yellow;
   padding: 5% 20px;
   margin: 0 auto;
 }
-#cool-text {
-  background-color: #fff;
-  padding: 2.5%;
-  width: 80%;
-}
-#events {
-  display: inline;
-  width: 100%;
-  background-color: #2a64f8;
-  padding: 2.5% 8%;
-  color: #fff;
-  text-align: center;
-  border: none;
-}
-#events:hover {
-  background-color: #000;
-}
 
-/* ---- Home Page and Navigation Images---- */
-.feat-img {
-  height: 45%;
-  display: inline-block;
+.icon-logo {
+  width: 35px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
 }
+/* ---- Home Page and Navigation Images---- */
+
 .mini-img {
   display: inline-block;
   min-width: 100px;
@@ -206,52 +197,70 @@ a:visited {
 /* =================================
 Media Queries
 ==================================== */
-@media (min-width: 769px) {
-  .wrap {
-    min-height: calc(100vh - 89px);
+@media (min-width: 300px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
   }
-  .name
   .main-nav li {
-    display: inline-block;
+    display: inline;
   }
+}
+
+@media (min-width: 769px) {
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .name,
   .col {
-    display: inline-block;
-    margin-right: -4px;
-    vertical-align: top;
-    padding: 30px 30px;
+    float: left;
   }
+  .primary,
   .secondary {
-    width: 25%;
-    margin-bottom: 15px;
-  }
-  .primary {
     width: 50%;
   }
   .tertiary {
-    width: 25%;
+
   }
-  .quad {
-    width: 100%;
-    padding: 0;
-    opacity: 0.5;
-    overflow: hidden;
+  .main-nav {
+    float: right;
   }
-}
-@media (max-width: 450px) {
-  .col {
+  .main-nav li {
     display: inline-block;
-    margin-right: -4px;
-    vertical-align: top;
-    padding: 5%;
+    margin-left: 15px;
   }
-  .secondary {
-    display:none;
-  }
-  .primary {
-    width: 100%;
-  }
-  .quad {
-    display:none;
+  .tagline {
+    font-size: 1.4em;
   }
 
+  /* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
+
+@media (min-width: 1025px) {
+  .container {
+    width: 80%;
+    max-width: 1400px;
+  }
+  .primary {
+    width: 70%;
+  }
+  .secondary,
+  .tertiary {
+    width: 30%;
+  }
+  .clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
 }
