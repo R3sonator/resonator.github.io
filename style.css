@@ -138,15 +138,21 @@ a:visited {
   padding: 1em;
 }
 
+.top {
+  vertical-align: bottom;
+}
+
 .main {
   padding: 10px;
   border: solid #2a64f8 2px;
+  position: relative;
 
 }
 .main-footer {
   text-align:center;
 	padding: 2em 0;
   color: #000;
+  position: relative;
 }
 
 .main-footer span {
@@ -181,8 +187,33 @@ a:visited {
   top: -15px;
   right: -15px;
 }
+.donate {
+  position: absolute;
+  top: -20px;
+  left: 60%;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .95rem;
+  padding: 10px;
+  min-width: 5%;
+  margin: 0;
+  background: #fff;
+  letter-spacing: 2px;
+  transform: skew(-15deg) rotate(-15deg);
+  border: solid 2px #000;
+  padding: 5px;
+}
+.donate img {
+  width: 25px;
+}
+.donate:hover {
+  box-shadow: 3px 3px 5px 6px pink;
+}
 /* ---- Home Page and Navigation Images---- */
 
+.feat-img {
+
+}
 .mini-img {
   display: inline-block;
   min-width: 100px;
@@ -234,6 +265,12 @@ Media Queries
   }
   .tagline {
     font-size: 1.4em;
+  }
+  .donate {
+    left: 80%;
+  }
+  .donate img {
+
   }
 
   /* ---- Float clearfix ---- */
