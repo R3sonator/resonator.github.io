@@ -23,7 +23,7 @@ h2,h3 {
 
 a {
 	text-decoration: none;
-  color: red;
+  color: #2a64f8;
 }
 
 i {
@@ -59,6 +59,7 @@ Home Page and Navigation
   letter-spacing: .2rem;
   text-align: left;
   margin: 0;
+  color: #2a64f8;
 }
 
 .name,
@@ -113,10 +114,10 @@ Home Page and Navigation
 .second-nav a:visited {
   color: #fff;
 }
-a:visited {
+a:visited, .donate a:visited {
   color: #2a64f8;
 }
-.second-nav a:hover, .header-nav a i:hover {
+.second-nav a:hover, .header-nav a i:hover, .icon-logo a i:hover {
   color: red;
 }
 .second-nav a:hover {
@@ -267,6 +268,7 @@ Media Queries
     font-size: 1.4em;
   }
   .donate {
+    top: -10px;
     left: 80%;
   }
   .donate img {
