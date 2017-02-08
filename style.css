@@ -242,7 +242,7 @@ Media Queries
   }
 }
 
-@media (min-width: 769px) {
+@media only screen and (min-width: 769px), only screen and (min-wdith: 700px), and (orientation: landscape) {
 
   .container {
     width: 90%;
