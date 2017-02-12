@@ -1,0 +1,341 @@
+/* =================================
+  Base Styles
+==================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+	line-height: 1.6;
+	color: #000;
+  background: pink;
+  font-family: "Nunito", sans-serif;
+}
+p {
+  font-size: .95em;
+}
+
+h2,h3 {
+  padding-bottom: 2px;
+  border-bottom: solid #2a64f8 2px;
+}
+
+a {
+	text-decoration: none;
+  color: #2a64f8;
+}
+li {
+  list-style: none;
+}
+i {
+  color: #2a64f8;
+}
+img {
+  max-width: 100%;
+}
+figure {
+  margin: 0;
+  line-height: 0;
+  position: relative;
+}
+
+
+
+
+/* =================================
+Home Page and Navigation
+==================================== */
+
+/*-- Header -- */
+.main-header {
+  padding: 15px 0;
+  vertical-align: baseline;
+  margin: 0 auto;
+}
+
+.name {
+  font-size: 1.95rem;
+  letter-spacing: .2rem;
+  text-align: left;
+  margin: 0;
+  color: #2a64f8;
+}
+
+.name,
+.header-nav a {
+  text-align: center;
+}
+
+.header-nav {
+  text-align: center;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.header-nav li {
+  list-style: none;
+}
+
+.header-nav a {
+  font-size: .95em;
+  color: #2a64f8;
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
+
+.header-nav a i {
+  font-size: 2em;
+  color: #2a64f8;
+  text-align: right;
+}
+.navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.second-nav {
+  padding: 10px;
+  margin: 10px auto;
+  color: #fff;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+}
+
+.second-nav li {
+  text-align: center;
+  display: inline-block;
+  padding: 0 2.5%;
+  text-transform: uppercase;
+}
+/*--Pseudo Classes--*/
+
+.second-nav a:visited {
+  color: #fff;
+}
+a:visited, .donate a:visited {
+  color: #2a64f8;
+}
+.second-nav a:hover, .header-nav a i:hover, .icon-logo i:hover {
+  color: red;
+}
+.second-nav a:hover {
+  border-bottom: dashed #fff 2px;
+}
+
+
+
+/*-- layout containers --*/
+
+.banner {
+  color: #fff;
+  background: #2a64f8;
+  margin-bottom: 15px;
+  padding: 5px 0;
+}
+
+.col {
+  padding: 1em;
+}
+
+.top {
+  vertical-align: bottom;
+}
+
+.main {
+  padding: 10px;
+  border: solid #2a64f8 2px;
+  position: relative;
+  background: #fff;
+
+}
+.main-footer {
+  text-align:center;
+	padding: 2em 0;
+  color: #000;
+  position: relative;
+}
+
+.main-footer span {
+  border-bottom: dashed red 2px;
+  padding: 10px;
+}
+
+/* ---- Home Page and Navigation Elements---- */
+.logo {
+  padding: 30px 10px;
+  margin: 4em 0 0 1em;
+}
+.category {
+  font-size: .98rem;
+  font-style: italic;
+}
+.headline {
+
+}
+.tagline {
+  font-size: 1rem;
+  border: none;
+}
+#feature {
+  background-color: yellow;
+  padding: 5% 20px;
+  margin: 0 auto;
+}
+
+.icon-logo {
+  width: 35px;
+  bottom: 0;
+  right: 0;
+}
+.donate {
+  position: absolute;;
+  right: 40px;
+  top: 10%;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .95rem;
+  padding: 10%;
+  min-width: 5%;
+  margin: 0;
+  background: #fff;
+  letter-spacing: 2px;
+  transform: skew(-15deg) rotate(-15deg);
+  border: solid 2px #000;
+  padding: 5px;
+}
+.donate img {
+  width: 25px;
+}
+.donate:hover {
+  box-shadow: 3px 3px 5px 6px pink;
+}
+/* ---- Home Page and Navigation Images---- */
+
+.feat-img {
+
+}
+.mini-img {
+  display: inline-block;
+  min-width: 100px;
+  opacity: 0.5;
+}
+.mini-img:hover {
+  opacity: 1;
+  border:solid #2a64f8 2px;
+}
+.contact a {
+  color: red;
+}
+.contact a:hover {
+  background-color: yellow;
+}
+
+
+/* =================================
+Media Queries
+==================================== */
+@media (min-width: 300px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .main-nav li {
+    display: inline;
+  }
+  .nav-bottom {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid red;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 1;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  .nav-bottom li {
+    padding: 1em;
+    align-self: center;
+  }
+}
+
+@media only screen and (min-width: 769px), only screen and (min-wdith: 700px), and (orientation: landscape) {
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .name,
+  .col {
+    float: left;
+  }
+
+
+  .primary,
+  .secondary {
+    width: 50%;
+  }
+  .tertiary {
+
+  }
+  .main-nav {
+    float: right;
+  }
+  .main-nav li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  .tagline {
+    font-size: 1.4em;
+  }
+  .donate {
+    top: -10px;
+    left: 80%;
+  }
+  .donate img {
+
+  }
+
+  /* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
+
+@media (min-width: 1025px) {
+  .container {
+    width: 80%;
+    max-width: 1400px;
+  }
+  .primary {
+    width: 70%;
+  }
+  .secondary,
+  .tertiary {
+    width: 30%;
+  }
+  .clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
